@@ -62,7 +62,7 @@ function ExploreInterface() {
                 <Container>
 
 
-                    <h3 className="category">Pick your Category</h3>
+                    <h3 className="category">Pick your Category!</h3>
                     <Row>
                         <Col md="10">
                             {btnCategory}

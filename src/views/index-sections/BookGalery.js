@@ -14,7 +14,6 @@ function BookGalery() {
         <>
             <div className="custom-control-inline" >
                 {booksData}
-
             </div>
         </>
     );
