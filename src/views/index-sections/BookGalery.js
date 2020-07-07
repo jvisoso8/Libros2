@@ -3,7 +3,7 @@ import React from "react";
 // reactstrap components
 import { Container, Row, Col } from "reactstrap";
 import Book from "./Book";
-import booksTestData from "/Users/josevisoso/WebstormProjects/librosprototipe/src/views/examples/booksTestData.js";
+import booksTestData from "C:/Users/Francisco/Documents/Libros/Cuarto/Libros2/src/views/examples/booksTestData.js";
 
 // core components
 
