@@ -42,7 +42,7 @@ function Explore() {
         if (
             !document.getElementById("sliderDouble").classList.contains("noUi-target")
         ) {
-            Slider.create(document.getElementById("sliderDouble"), {
+            Slider.create(document.z0("sliderDouble"), {
                 start: [20, 80],
                 connect: [false, true, false],
                 step: 1,

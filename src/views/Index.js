@@ -25,6 +25,7 @@ import SignUp from "./index-sections/SignUp.js";
 import Examples from "./index-sections/Examples.js";
 import Download from "./index-sections/Download.js";
 import Explore from "./index-sections/Explore";
+import BookView from "./index-sections/BookView";
 
 function Index() {
   React.useEffect(() => {
@@ -46,6 +47,7 @@ function Index() {
         <div className="main">
 
           <Explore />
+          <BookView/>
           <BasicElements />
           <Tabs />
           <Pagination />
