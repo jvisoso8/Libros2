@@ -21,6 +21,7 @@ import booksTestData from "../examples/booksTestData";
 import Book from "./Book";
 import categoryData from "../examples/categoryData";
 import BtnCategory from "./BtnCategory";
+import CategoryBtns from "./CategoryBtns";
 
 // core components
 
@@ -52,7 +53,7 @@ function ExploreInterface() {
         }
     });
 
-    const btnCategory = categoryData.map(category => <BtnCategory name = {category.name} />)
+
 
     return (
         <>
@@ -65,7 +66,7 @@ function ExploreInterface() {
                     <h3 className="category">Pick your Category!</h3>
                     <Row>
                         <Col md="10">
-                            {btnCategory}
+                            <CategoryBtns />
                         </Col>
                     </Row>
 

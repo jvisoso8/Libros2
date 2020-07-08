@@ -11,7 +11,7 @@ function BtnCategory(props) {
     return (
 
         <>
-            <Button className="bg-category-btn" size="lg">
+            <Button className="bg-category-btn" size="lg" onClick={props.onClick}>
                 {name}
             </Button>
         </>

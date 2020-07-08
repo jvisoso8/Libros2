@@ -1,4 +1,5 @@
 import React from "react";
+import BookView from "./BookView.js";
 
 // reactstrap components
 
@@ -7,20 +8,35 @@ import {
     Row,
     Col,
     Card,
-    Button,
+
     CardImg,
     CardBody,
     CardTitle,
     CardText,
-    UncontrolledTooltip
+
+    Button,
+    FormGroup,
+
+    Modal,
+    ModalBody,
+
+    UncontrolledTooltip,
+    PopoverBody,
+    PopoverHeader,
+    UncontrolledPopover,
+
 } from "reactstrap";
 
 // core components
+
+
 
 function Book(props) {
     console.log(props)
     let src = props.src.toString()
     let authorName = props.author
+    const [modal1, setModal1] = React.useState(false);
+    const [modal2, setModal2] = React.useState(false);
     return (
 
         <>
@@ -40,11 +56,43 @@ function Book(props) {
 
                                         </CardText>
                                         <Button variant="primary"
+                                                action="https://google.com"
                                                 className="btn-tooltip mr-1"
                                                 color="default"
                                                 id="tooltip1"
                                                 type="button"
-                                        >Go somewhere</Button>
+                                                onClick={() => setModal1(true)}
+                                        >Go somewhere
+                                        </Button>
+                                        <Modal size="lg" isOpen={modal1} toggle={() => setModal1(false)}>
+                                            <div className="modal-header justify-content-center">
+                                                <button
+                                                    className="close"
+                                                    type="button"
+                                                    onClick={() => setModal1(false)}
+                                                >
+                                                    <i className="now-ui-icons ui-1_simple-remove"></i>
+                                                </button>
+                                            </div>
+                                            <ModalBody>
+                                                <BookView/>
+                                            </ModalBody>
+                                            <div className="modal-footer">
+                                                <Button color="default" type="button">
+                                                    More Details
+                                                </Button>
+                                                <Button color="default" type="button">
+                                                    Where to Buy
+                                                </Button>
+                                                <Button
+                                                    color="danger"
+                                                    type="button"
+                                                    onClick={() => setModal1(false)}
+                                                >
+                                                    Close
+                                                </Button>
+                                            </div>
+                                        </Modal>
                                         <UncontrolledTooltip
                                             delay={0}
                                             placement="bottom"
