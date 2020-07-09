@@ -110,7 +110,9 @@ class BtnCategory extends React.Component {
                         {this.props.name}
                     </Button>
                 }
+                { console.log(this.state)}
                 {this.state.btnCategory}
+                { console.log(this.state)}
 
             </Container>
         );
