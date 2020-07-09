@@ -12,19 +12,59 @@ class CategoryBtns extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            //btnCategory: categoryData.map(category => <BtnCategory name = {category.name} onClick="handelClick" />)
+            categories: [
+                { id: 'fdsd', name: 'Fantasy'  },
+                { id: 'adsf', name: 'Mastery' },
+                { id: 'afdsf', name: 'SiFi' },
+            ],
+            displayQuestions: false,
+            btnCategory : "fiction",
 
-            btnCategory: categoryData.map(category => <BtnCategory name = {category.name}  />)
+
         }
 
+        this.handleClick = this.handleClick.bind(this)
+    }
+    handleClick = (e) => {
+        let name = e.target.getAttribute("name")
+        this.setState(prevState => {
+            return {
+                btnCategory: name,
+                categories:  [
+                {name: "magic"},
+                {name: "fighting"}
+            ]
+            }
+        })
+    }
+
+
+    displayQuestion = () => {
+        this.setState({
+            displayQuestions: !this.state.displayQuestions
+        })
     }
 
     render() {
+        let subcategories
+        if ( this.state.displayQuestions ) {
+            subcategories = (
+                <div>
+                    { this.state.categories.map((categorie, index) => {
+                        return <BtnCategory key={categorie.id}
+                                         name={categorie.name} changeMain={this.handleClick} />
+                    })}
+                </div>
+            )
+        }
         return (
 
             <>
-                <div className="bg-white" size="lg">
-                    {this.state.btnCategory}
-                </div>
+
+            <button className="btn" onClick={this.displayQuestion}>{this.state.btnCategory}</button>
+            {subcategories}
+
             </>
         );
     }
