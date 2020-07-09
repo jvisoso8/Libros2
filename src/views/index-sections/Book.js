@@ -73,6 +73,7 @@ function Book(props) {
                                                 >
                                                     <i className="now-ui-icons ui-1_simple-remove"></i>
                                                 </button>
+                                                <h4 className="title title-up">Book Quick Info</h4>
                                             </div>
                                             <ModalBody>
                                                 <BookView/>

@@ -9,23 +9,13 @@ import BtnCategory from "./BtnCategory";
 
 class CategoryBtns extends React.Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            count: 0,
-            btnCategory: categoryData.map(category => <BtnCategory name = {category.name} onClick={this.handleClick} />)
 
+            btnCategory: categoryData.map(category => <BtnCategory name = {category.name}  />)
         }
-        this.handleClick = this.handleClick.bind(this)
 
-    }
-    handleClick() {
-        this.setState(prevState => {
-            return {
-                btnCategory: <BtnCategory name = {prevState.count + 1} onClick={this.handleClick} />,
-                count: prevState.count + 1
-            }
-        })
     }
 
     render() {

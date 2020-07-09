@@ -48,7 +48,7 @@ function Index() {
         <div className="main">
           <HelpMessage />
           <Explore />
-          <BookView />
+
           <BasicElements />
           <Tabs />
           <Pagination />
