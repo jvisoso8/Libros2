@@ -32,18 +32,22 @@ class CategoryBtns extends React.Component {
             return {
                 btnCategory: name,
                 categories:  [
-                {name: "magic"},
-                {name: "fighting"}
+                    {name: "magic"},
+                    {name: "fighting"},
+                    {name: "historical"},
+                    {name: "romance"}
             ]
             }
         })
     }
 
 
-    displayQuestion = () => {
+    goBack = () => {
         this.setState({
             displayQuestions: !this.state.displayQuestions
         })
+        //por el momento solo esconde lo de abajo necesitamos la bd para hacer esto bn y modificar todo a api calls
+        //https://scrimba.com/p/p7P5Hd/c79Jask
     }
 
     render() {
@@ -62,7 +66,7 @@ class CategoryBtns extends React.Component {
 
             <>
 
-            <button className="btn" onClick={this.displayQuestion}>{this.state.btnCategory}</button>
+            <Button size="lg" className="info" onClick={this.goBack}>{this.state.btnCategory}</Button>
             {subcategories}
 
             </>

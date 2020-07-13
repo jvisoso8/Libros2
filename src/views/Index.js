@@ -27,6 +27,7 @@ import Download from "./index-sections/Download.js";
 import Explore from "./index-sections/Explore";
 import HelpMessage from "./index-sections/HelpMessage";
 import BookView from "./index-sections/BookView";
+import Book from "./index-sections/Book";
 
 function Index() {
   React.useEffect(() => {
@@ -48,7 +49,7 @@ function Index() {
         <div className="main">
           <HelpMessage />
           <Explore />
-
+          <BookView />
           <BasicElements />
           <Tabs />
           <Pagination />

@@ -40,7 +40,7 @@ function IndexHeader() {
               className="n-logo"
               src={require("assets/img/logoThoja.png")}
             ></img>
-            <h1 className="h1-seo">  the ibidem </h1>
+            <h1 className="h1-seo ">   Uncover Books  </h1>
             <h3>Find what to read next</h3>
 
 
