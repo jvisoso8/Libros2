@@ -52,11 +52,11 @@ function Explore() {
     });
     return (
         <>
-            <div className="section section-basic bg-white " id="basic-elements">
+            <div className="section-explore  bg-white " id="basic-elements">
                 <h1 className="title-center ">Explore</h1>
                 <div className="space-50"></div>
-                <Container>
-                    <div className="row">
+                <Container className="section-example">
+                    <div className="row-test">
                     <div className="col-lg-9">
                         <ExploreInterface />
                         <p className="category">Top Books based on your search:</p>

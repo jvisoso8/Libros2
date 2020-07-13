@@ -4,7 +4,7 @@
 * Now UI Kit React - v1.4.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-react
+* Product Page: npm install -g @aws-amplify/cli
 * Copyright 2020 Creative Tim (http://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit-react/blob/master/LICENSE.md)
 
