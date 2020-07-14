@@ -40,8 +40,8 @@ function IndexHeader() {
               className="n-logo"
               src={require("assets/img/logoThoja.png")}
             ></img>
-            <h1 className="h1-seo ">   Uncover Index  </h1>
-            <h3>Find what to read next</h3>
+            <h1 className="h1-seo ">   Uncover Index</h1>
+            <h3> Find what to read next</h3>
 
 
               <Button size="lg">

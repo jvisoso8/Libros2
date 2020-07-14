@@ -35,6 +35,14 @@ class CategoryBtns extends React.Component {
                     {name: "magic"},
                     {name: "fighting"},
                     {name: "historical"},
+                    {name: "romance"},
+                    {name: "magic"},
+                    {name: "fighting"},
+                    {name: "historical"},
+                    {name: "romance"},
+                    {name: "magic"},
+                    {name: "fighting"},
+                    {name: "historical"},
                     {name: "romance"}
             ]
             }
@@ -66,7 +74,7 @@ class CategoryBtns extends React.Component {
 
             <>
 
-            <Button size="lg" className="info" onClick={this.goBack}>{this.state.btnCategory}</Button>
+            <Button size="lg" className="bg-blue text-uppercase" onClick={this.goBack}>{this.state.btnCategory}</Button>
             {subcategories}
 
             </>

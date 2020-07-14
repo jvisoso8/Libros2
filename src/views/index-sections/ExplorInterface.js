@@ -64,6 +64,8 @@ function ExploreInterface() {
 
 
                     <h3 className="category">Pick your Category!</h3>
+
+
                     <Row>
                         <Col md="10">
                             <CategoryBtns />

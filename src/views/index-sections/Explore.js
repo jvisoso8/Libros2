@@ -20,6 +20,8 @@ import {
 import ExploreInterface from "./ExplorInterface";
 import Book from "./Book";
 import BookGalery from "./BookGalery";
+import Filters from "./Filters";
+
 
 // core components
 
@@ -56,7 +58,7 @@ function Explore() {
                 <h1 className="title-center ">Explore</h1>
                 <div className="space-50"></div>
                 <Container className="section-example">
-                    <div className="row-test">
+                    <div className="row">
                     <div className="col-lg-9">
                         <ExploreInterface />
                         <p className="category">Top Books based on your search:</p>
@@ -65,35 +67,11 @@ function Explore() {
                         <div className="small-space"></div>
                         <p className="text-link font-weight-bold ">See All...</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-sm-3">
+
+                        <Filters />
 
 
-
-                        <h3 className="category ">Pick your Filter</h3>
-                        <p className="category ">Your  filters</p>
-                            <Button color="default">Filter 1</Button>
-                            <Button color="default">Filter 2</Button>
-
-                        <p className="category ">Popular Filters</p>
-                        <FormGroup>
-                            <Input
-                                className="bg-whiteW"
-                                defaultValue=""
-                                placeholder="Other Filters"
-                                type="text"
-                            ></Input>
-                        </FormGroup>
-
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
-                        <Button color="default">Default</Button>
 
                     </div>
 
