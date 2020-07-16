@@ -28,6 +28,7 @@ class CategoryBtns extends React.Component {
     }
     handleClick = (e) => {
         let name = e.target.getAttribute("name")
+        this.props.catH(name)
         this.setState(prevState => {
             return {
                 btnCategory: name,

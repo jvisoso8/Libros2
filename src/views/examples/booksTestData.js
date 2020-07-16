@@ -2,7 +2,9 @@ const booksTestData = [
     {
         id: 1,
         src: require("assets/img/SAMcover.jpg"),
-        author: "Andrew Rowe"
+        author: "Andrew Rowe",
+        cat: ["fantasy","magic"],
+        tags: ["fantasy","magic"]
     },
     {
         id: 2,

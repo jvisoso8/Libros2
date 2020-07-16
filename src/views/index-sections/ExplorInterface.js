@@ -25,7 +25,7 @@ import CategoryBtns from "./CategoryBtns";
 
 // core components
 
-function ExploreInterface() {
+function ExploreInterface(props) {
     const [leftFocus, setLeftFocus] = React.useState(false);
     const [rightFocus, setRightFocus] = React.useState(false);
     React.useEffect(() => {
@@ -68,7 +68,7 @@ function ExploreInterface() {
 
                     <Row>
                         <Col md="10">
-                            <CategoryBtns />
+                            <CategoryBtns catH = {props.catH}/>
                         </Col>
                     </Row>
 
