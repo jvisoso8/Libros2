@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, FormGroup, Input} from "reactstrap";
+import { FormGroup, Input} from "reactstrap";
 import Filter from "./Filter";
 
 class Filters extends React.Component {
@@ -18,9 +18,9 @@ class Filters extends React.Component {
             ],
             changed: false
 
-        }
-        this.handleClickFilter = this.handleClickFilter.bind(this)
-    }
+        };
+        this.handleClickFilter = this.handleClickFilter.bind(this);
+    };
     handleClickFilter = (e) => {
         let id = e.target.getAttribute("id").toString()
         console.log(this.state.filters)
@@ -31,18 +31,14 @@ class Filters extends React.Component {
                     this.state.change = !prevState.change
                 )
                 }
-            )
-    }
-
-
-
+            );
+    };
     render() {
         return(
             <>
                 <h3 className="category ">Pick your Filter</h3>
                 <p className="category ">Your  filters</p>
                     <Filter filters={this.state.filters} cat= "used" handel={this.handleClickFilter}/>
-
                 <p className="category ">Popular Filters</p>
                 <FormGroup>
                     <Input
@@ -52,14 +48,9 @@ class Filters extends React.Component {
                         type="text"
                     ></Input>
                 </FormGroup>
-
                 <Filter  filters={this.state.filters} cat = "unused" handel={this.handleClickFilter} />
-
-
             </>
         )
     }
-
 }
-
 export default Filters

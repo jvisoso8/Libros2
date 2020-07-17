@@ -8,52 +8,34 @@ import {
     Row,
     Col,
     Card,
-
     CardImg,
     CardBody,
     CardTitle,
     CardText,
-
     Button,
-    FormGroup,
-
     Modal,
     ModalBody,
-
     UncontrolledTooltip,
-    PopoverBody,
-    PopoverHeader,
-    UncontrolledPopover,
-
 } from "reactstrap";
-
-// core components
-
-
 
 function Book(props) {
     console.log(props)
     let src = props.src.toString()
     let authorName = props.author
     const [modal1, setModal1] = React.useState(false);
-    const [modal2, setModal2] = React.useState(false);
     return (
-
         <>
             <div>
                 <Container>
                     <Row>
                         <Col>
                             <div >
-
-
                                 <Card style={{ width: '10rem' }} className="bg-whiteW">
                                     <CardImg variant="top" src={src} />
                                     <CardBody>
                                         <CardTitle> Sufficiently Advanced Magic</CardTitle>
                                         <CardText>
                                             <p><strong>Author:</strong> {authorName}</p>
-
                                         </CardText>
                                         <Button variant="primary"
                                                 action="https://google.com"
@@ -62,15 +44,14 @@ function Book(props) {
                                                 id="tooltip1"
                                                 type="button"
                                                 onClick={() => setModal1(true)}
-                                        >Go somewhere
+                                                >Go somewhere
                                         </Button>
                                         <Modal size="lg" isOpen={modal1} toggle={() => setModal1(false)}>
                                             <div className="modal-header justify-content-center">
                                                 <button
                                                     className="close"
                                                     type="button"
-                                                    onClick={() => setModal1(false)}
-                                                >
+                                                    onClick={() => setModal1(false)}>
                                                     <i className="now-ui-icons ui-1_simple-remove"></i>
                                                 </button>
                                                 <h4 className="title title-up">Book Quick Info</h4>
@@ -88,8 +69,7 @@ function Book(props) {
                                                 <Button
                                                     color="danger"
                                                     type="button"
-                                                    onClick={() => setModal1(false)}
-                                                >
+                                                    onClick={() => setModal1(false)}>
                                                     Close
                                                 </Button>
                                             </div>
@@ -97,16 +77,13 @@ function Book(props) {
                                         <UncontrolledTooltip
                                             delay={0}
                                             placement="bottom"
-                                            target="tooltip1"
-                                        >
+                                            target="tooltip1">
                                             Tags : test
                                         </UncontrolledTooltip>
                                     </CardBody>
                                 </Card>
                             </div>
                         </Col>
-
-
                     </Row>
                 </Container>
             </div>

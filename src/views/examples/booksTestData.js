@@ -22,7 +22,7 @@ const booksTestData = [
         src: require("assets/img/julie.jpg"),
         author: "you"
 
-    }
+    } 
 ]
 
 

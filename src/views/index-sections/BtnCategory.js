@@ -1,14 +1,20 @@
 import React from "react";
 
 // reactstrap components
-import {Container, Row, Col, Button} from "reactstrap";
-import CategoryBtns from "./CategoryBtns";
+import { Button} from "reactstrap";
+
 
 // core components
 
 const BtnCategory = ( props ) => {
     return (
-        <Button size="lg" className="info" onClick={props.changeMain} name={props.name} >
+        <Button 
+            size="lg" 
+            className="info" 
+            key={props.id} 
+            onClick={props.changeMain} 
+            name={props.name}> 
+        
             {props.name}
         </Button>
     )
