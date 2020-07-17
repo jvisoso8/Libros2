@@ -12,7 +12,7 @@ class BookView extends React.Component {
             <Container>
                 <div className="row">
                     <div className="col-4">
-                        <img src = {require("assets/img/SAMcover.jpg")} style={{height: "90%",width: "90%"}}></img>
+                        <img className = "photo" src = {require("assets/img/SAMcover.jpg")} resizeMode="contain" style={{height: undefined,width: "100%", aspectRatio: 135 / 76}}></img>
                     </div>
                     <div className="col-8">
                         <p><strong>Title: </strong>Sufficiently Advanced Magic</p>

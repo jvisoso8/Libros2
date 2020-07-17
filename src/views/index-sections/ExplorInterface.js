@@ -36,16 +36,12 @@ function ExploreInterface(props) {
 
     return(
         <>
-            <div className="section  bg-white  " id="basic-elements">
-                <Container>
-                    <h3 className="category">Pick your Category!</h3>
-                    <Row>
-                        <Col md="10">
-                            <CategoryBtns catH = {props.catH}/>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+                <h3 className="category">Pick your Category!</h3>
+                <Row>
+                    <Col>
+                        <CategoryBtns catH = {props.catH}/>
+                    </Col>
+                </Row>
         </>
     );
 }

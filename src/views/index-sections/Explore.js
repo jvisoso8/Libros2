@@ -31,10 +31,10 @@ class Explore extends React.Component{
                     <Container className="section-example">
                         <Container className="section-example">
                             <div className="row">
-                                <div className="col-lg-9">
+                                <div className="col-lg-8">
                                     <ExploreInterface catH={this.handleCatChange} />
                                 </div>
-                                <div className="col-lg-3">
+                                <div className="col-lg-4">
                                     <Filters filters={this.state.category} />
                                 </div>
                             </div>

@@ -30,12 +30,18 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import AddBook from "./components/add-book.component.js";
+
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
         <Route path="/index" render={(props) => <Index {...props} />} />
+        <Route
+          path="/books"
+          render={(props) => <AddBook/>}
+        />
         <Route
           path="/nucleo-icons"
           render={(props) => <NucleoIcons {...props} />}
