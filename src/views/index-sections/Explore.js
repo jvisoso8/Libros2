@@ -29,19 +29,24 @@ class Explore extends React.Component{
                     <h1 className="title-center ">Explore</h1>
                     <div className="space-50"></div>
                     <Container className="section-example">
+                        <Container className="section-example">
+                            <div className="row">
+                                <div className="col-lg-9">
+                                    <ExploreInterface catH={this.handleCatChange} />
+                                </div>
+                                <div className="col-lg-3">
+                                    <Filters filters={this.state.category} />
+                                </div>
+                            </div>
+                        </Container>
+                        <div className="small-space"></div>
+                        <div className="space-50"></div>
+                        <p className="category">Top Books based on your search:</p>
                         <div className="row">
-                            <div className="col-lg-9">
-                                <ExploreInterface catH={this.handleCatChange} />
-                                <p className="category">Top Books based on your search:</p>
-                                <div className="small-space"></div>
-                                <BookGalery  cat={this.state.category}/>
-                                <div className="small-space"></div>
-                                <p className="text-link font-weight-bold ">See All...</p>
-                            </div>
-                            <div className="col-sm-3">
-                                <Filters filters={this.state.category} />
-                            </div>
+                            <div className="small-space"></div>
+                            <BookGalery  cat={this.state.category}/>
                         </div>
+                        <p className="text-link font-weight-bold ">See All...</p>
                     </Container>
                 </div>
             </>
