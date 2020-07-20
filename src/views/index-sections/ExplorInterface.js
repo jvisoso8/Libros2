@@ -58,10 +58,6 @@ function ExploreInterface(props) {
     return (
         <>
 
-            <div className="section  bg-white  " id="basic-elements">
-
-                <Container>
-
 
                     <h3 className="category">Pick your Category!</h3>
 
@@ -73,9 +69,6 @@ function ExploreInterface(props) {
                     </Row>
 
 
-
-                </Container>
-            </div>
         </>
     );
 }

@@ -28,6 +28,8 @@ import Explore from "./index-sections/Explore";
 import HelpMessage from "./index-sections/HelpMessage";
 import BookView from "./index-sections/BookView";
 import Book from "./index-sections/Book";
+import TestSection from "./index-sections/TestSection";
+import AddBook from "./index-sections/AddBook";
 
 function Index() {
   React.useEffect(() => {
@@ -50,6 +52,8 @@ function Index() {
           <HelpMessage />
           <Explore />
           <BookView />
+          <TestSection />
+          <AddBook />
           <BasicElements />
           <Tabs />
           <Pagination />

@@ -1,7 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import {Container, Row, Col, Button} from "reactstrap";
+import {Container, Row, Col, Button, Spinner} from "reactstrap";
 import categoryData from "../examples/categoryData";
 import BtnCategory from "./BtnCategory";
 
@@ -13,6 +13,7 @@ class CategoryBtns extends React.Component {
         super(props)
         this.state = {
             //btnCategory: categoryData.map(category => <BtnCategory name = {category.name} onClick="handelClick" />)
+            loading : false,
             categories: [
                 { id: 'fdsd', name: 'Fantasy'  },
                 { id: 'adsf', name: 'Mastery' },
@@ -29,8 +30,24 @@ class CategoryBtns extends React.Component {
     handleClick = (e) => {
         let name = e.target.getAttribute("name")
         this.props.catH(name)
+        //aqui va el api call para nuevas categorias
+        this.setState({loading: true})
+        /*
+        //ejemplo de api call
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    loading: false,
+                    btnCategory: data.id
+                })
+            })
+            */
+
+
         this.setState(prevState => {
             return {
+                loading: false,
                 btnCategory: name,
                 categories:  [
                     {name: "magic"},
@@ -48,6 +65,7 @@ class CategoryBtns extends React.Component {
             ]
             }
         })
+
     }
 
 
@@ -61,6 +79,7 @@ class CategoryBtns extends React.Component {
 
     render() {
         let subcategories
+        const loading = this.state.loading ? <Spinner className="spinner-grow" /> : <></>
         if ( this.state.displayQuestions ) {
             subcategories = (
                 <div>
@@ -74,9 +93,12 @@ class CategoryBtns extends React.Component {
         return (
 
             <>
+                <h1>{loading}</h1>
+                <Button size="lg" className="bg-blue text-uppercase" onClick={this.goBack}>
+                    {this.state.btnCategory}
+                </Button>
 
-            <Button size="lg" className="bg-blue text-uppercase" onClick={this.goBack}>{this.state.btnCategory}</Button>
-            {subcategories}
+                {subcategories}
 
             </>
         );

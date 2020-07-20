@@ -1,11 +1,12 @@
 import React from "react";
-import {Button, FormGroup, Input} from "reactstrap";
+import {Button, FormGroup, Input, Spinner} from "reactstrap";
 import Filter from "./Filter";
 
 class Filters extends React.Component {
     constructor() {
         super();
         this.state = {
+            loading : false,
             filters:[
                 {id:0, name: "filter 0", active: true},
                 {id:1, name: "filter 1", active: true},
@@ -24,6 +25,19 @@ class Filters extends React.Component {
     handleClickFilter = (e) => {
         let id = e.target.getAttribute("id").toString()
         console.log(this.state.filters)
+        this.setState({loading: true})
+        /*
+        //ejemplo de api call
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    loading: false,
+                    btnCategory: data.id
+                })
+            })
+            */
+
         this.setState(prevState => {
                 this.state.filters[id].active = !prevState.filters[id].active
                 console.log(this.state.filters)
@@ -37,8 +51,10 @@ class Filters extends React.Component {
 
 
     render() {
+        const loading = this.state.loading ? <Spinner className="spinner-grow" /> : <></>
         return(
             <>
+                {loading}
                 <h3 className="category ">Pick your Filter</h3>
                 <p className="category ">Your  filters</p>
                     <Filter filters={this.state.filters} cat= "used" handel={this.handleClickFilter}/>

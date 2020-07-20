@@ -40,22 +40,25 @@ function Book(props) {
     return (
 
         <>
-            <div>
+
                 <Container>
-                    <Row>
-                        <Col>
+
+
                             <div >
 
 
-                                <Card style={{ width: '10rem' }} className="bg-whiteW">
+                                <Card style={{ width: '10rem'}} className="bg-whiteW">
                                     <CardImg variant="top" src={src} />
-                                    <CardBody>
+                                    <CardBody >
                                         <CardTitle> Sufficiently Advanced Magic</CardTitle>
                                         <CardText>
-                                            <p><strong>Author:</strong> {authorName}</p>
+                                            <p className="text-muted small">Author: {authorName}</p>
 
                                         </CardText>
-                                        <Button variant="primary"
+
+                                        <Button
+
+                                                variant="primary"
                                                 action="https://google.com"
                                                 className="btn-tooltip mr-1"
                                                 color="default"
@@ -104,12 +107,12 @@ function Book(props) {
                                     </CardBody>
                                 </Card>
                             </div>
-                        </Col>
 
 
-                    </Row>
+
+
                 </Container>
-            </div>
+
         </>
     );
 }
