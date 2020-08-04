@@ -28,13 +28,17 @@ connection.once('open', () =>{
 //ponga exercises al final va a lodear todo lo que esta en el 
 //exercises router, lo mismo para users.
 //----------------------------------------------------------
-//Abajo cambias los files que bas a poner en models y routes
+//Abajo cambias los files que vas a poner en models y routes
 //----------------------------------------------------------
 //const excercisesRouter = require('./routes/exercises');
 //const usersRouter = require('./routes/users');
 
 //app.use('/exercises',excercisesRouter);
 //app.use('/users',usersRouter);
+const booksRouter = require('./routes/books');
+app.use('/books',booksRouter);
+
+
 //-----------------------------------------------------------
 //Starts the server, listens on a port
 //Aguas con las comillas raras de abajo

@@ -18,15 +18,17 @@ router.route('/').get((req, res) =>{
 });
 */
 //------------------------------------------------------
+
 router.route('/add').post((req, res) => {
     const title = req.body.title;
     const author = req.body.author;
     const image = req.body.image;
     const isbn = req.body.isbn;
-    const datePub = req.body.date;
+    const datePub = Date(req.body.date);
     const sinopsis = req.body.sinopsis;
     const categories = req.body.categories;
     const tags = req.body.tags;
+    const series = req.body.series;
 
     const newBook = new Book({
         title,
@@ -36,10 +38,17 @@ router.route('/add').post((req, res) => {
         datePub,
         sinopsis,
         categories,
-        tags
+        tags,
+        series
     });
     newBook.save()
         .then(() => res.json('Book added!!')) //SIN PUNTOYCOMA, si lo pones vale V
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/get').post((req, res) => {
+    Book.find({$and: [{"categories": {"$in" : [req.body.categories]}}, {"tags": {"$in" : [req.body.tags]}}]})
+        .then(exercises => res.json(exercises)) 
         .catch(err => res.status(400).json('Error: ' + err));
 });
 

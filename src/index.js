@@ -31,6 +31,8 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import AddBook from "./components/add-book.component.js";
+import GetBook from "./components/get-book.component.js";
+
 
 
 ReactDOM.render(
@@ -43,8 +45,8 @@ ReactDOM.render(
           render={(props) => <AddBook/>}
         />
         <Route
-          path="/nucleo-icons"
-          render={(props) => <NucleoIcons {...props} />}
+          path="/getBooks"
+          render={(props) => <GetBook/>}
         />
         <Route
           path="/landing-page"

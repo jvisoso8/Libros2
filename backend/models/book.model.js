@@ -7,12 +7,13 @@ require('mongoose-type-url');
 const ThisSchema = new Schema({
     title: {type: String, required: true},
     author: {type: String, required: true},
-    image: {type: mongoose.SchemaTypes.Url, required: true},
+    image: {type: String, required: true},
     isbn: {type: String, required: true, unique: true},
     datePub: {type: Date, required: true},
-    sinopsis: {type: Number, required: true},
+    sinopsis: {type: String, required: true},
     categories: [{type: String}],
     tags: [{type: String}],
+    series: {type: String, required: true},
 },{
     timestamps: false,
 });
