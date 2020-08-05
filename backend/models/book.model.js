@@ -1,7 +1,6 @@
 //Aguas, tienes que instalar los paquetes de aqui abajo.
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-require('mongoose-type-url');
 //Lo de adentro de username son validaciones.
 //Es un esquema del documento de cada libro en la BD.
 const ThisSchema = new Schema({

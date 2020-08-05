@@ -18,7 +18,8 @@ router.route('/').get((req, res) =>{
 });
 */
 //------------------------------------------------------
-
+//POST
+//Guarda libro en la DB
 router.route('/add').post((req, res) => {
     const title = req.body.title;
     const author = req.body.author;
@@ -45,10 +46,18 @@ router.route('/add').post((req, res) => {
         .then(() => res.json('Book added!!')) //SIN PUNTOYCOMA, si lo pones vale V
         .catch(err => res.status(400).json('Error: ' + err));
 });
-
+//POST
+//Regresa coincidencias de libros con tales tags y cats
 router.route('/get').post((req, res) => {
     Book.find({$and: [{"categories": {"$in" : [req.body.categories]}}, {"tags": {"$in" : [req.body.tags]}}]})
         .then(exercises => res.json(exercises)) 
+        .catch(err => res.status(400).json('Error: ' + err));
+});
+//GET
+//Regresa libro especifico por id de Mongo
+router.route('/getId/:id').get((req, res) => {
+    Book.findById(req.params.id)
+        .then(exercise => res.json(exercise))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 

@@ -36,7 +36,9 @@ connection.once('open', () =>{
 //app.use('/exercises',excercisesRouter);
 //app.use('/users',usersRouter);
 const booksRouter = require('./routes/books');
+const tagsRouter = require('./routes/tags');
 app.use('/books',booksRouter);
+app.use('/tags',tagsRouter);
 
 
 //-----------------------------------------------------------
