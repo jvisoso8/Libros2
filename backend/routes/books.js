@@ -49,7 +49,7 @@ router.route('/add').post((req, res) => {
 //POST
 //Regresa coincidencias de libros con tales tags y cats
 router.route('/get').post((req, res) => {
-    Book.find({$and: [{"categories": {"$in" : [req.body.categories]}}, {"tags": {"$in" : [req.body.tags]}}]})
+    Book.find({$and: [{"categories": {"$in" : req.body.categories}}, {"tags": {"$in" : req.body.tags}}]})
         .then(exercises => res.json(exercises)) 
         .catch(err => res.status(400).json('Error: ' + err));
 });
@@ -59,6 +59,12 @@ router.route('/getId/:id').get((req, res) => {
     Book.findById(req.params.id)
         .then(exercise => res.json(exercise))
         .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/getName').post((req, res) => {
+    Book.find({"title": {"$regex" : req.body.title , "$options": "i"}})
+    .then(exercises => res.json(exercises)) 
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
 //esto se hace para todos los routerfiles.

@@ -37,9 +37,11 @@ connection.once('open', () =>{
 //app.use('/users',usersRouter);
 const booksRouter = require('./routes/books');
 const tagsRouter = require('./routes/tags');
+const categRouter = require('./routes/categ');
+
 app.use('/books',booksRouter);
 app.use('/tags',tagsRouter);
-
+app.use('/categ',categRouter);
 
 //-----------------------------------------------------------
 //Starts the server, listens on a port
